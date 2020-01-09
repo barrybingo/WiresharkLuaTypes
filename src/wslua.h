@@ -31,7 +31,13 @@
 #include <lualib.h>
 #include <lauxlib.h>
 
-#if defined(_MSC_VER)
+
+#ifdef LUAWSTYPES_USE_GLIB
+#include <glib.h>
+#endif
+
+
+#if !defined(__GLIBC__)
 
 #include "glibtypes.h"
 
@@ -46,10 +52,12 @@ inline void g_error(const char* fmt, ...)
     fprintf(stderr, "\n");
     fflush(stderr);
 
+#if defined(_MSC_VER)
     if (IsDebuggerPresent())
     {
         __debugbreak();
-    }      
+    }
+#endif
 }
 #endif
 
@@ -60,7 +68,7 @@ inline void g_error(const char* fmt, ...)
 #endif
 
 // Wireshark defines _U_ to mean "Unused" (compiler specific define)
-#define _U_ 
+#define _U_
 
 
 /** @file
@@ -464,7 +472,7 @@ void wslua_register_class(lua_State* L, const wslua_class* cls_def);
 
 extern gboolean wslua_optbool(lua_State* L, int n, gboolean def);
 
-extern const char* wslua_checkstring_only(lua_State* L, int n); 
+extern const char* wslua_checkstring_only(lua_State* L, int n);
 extern const char* wslua_checklstring_only(lua_State* L, int n, size_t* l);
 extern int wslua__concat(lua_State* L);
 

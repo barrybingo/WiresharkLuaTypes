@@ -6,11 +6,29 @@ and [Struct](https://www.wireshark.org/docs/wsdg_html_chunked/lua_module_Struct.
 
 Source from <https://github.com/wireshark/wireshark>
 
-Build: VS2019 - x64 - LuaJIT 2.1.0-beta3       [Might work with other Lua; 6 ways to find out]
+
+Build
+-----
+
++ VS2019: use the vcxproj file and set AdditionalIncludeDirectories and AdditionalLibraryDirectories
++ Linux: use makefile
+
+```shell-script
+    make PLAT=linux LUAV_INSTALL=5.1 LUAV_INC=jit-2.1
+    make install
+    make test
+```
+
+Built and tested working with:
+    * VS2019 - x64 - LuaJIT 2.1.0-beta3
+    * arch linux  LuaJIT 2.1.0-beta3
+
 
 Usage:
 
+```shell-script
     luajit  -lwiresharktypes
+```
 
 or
 
