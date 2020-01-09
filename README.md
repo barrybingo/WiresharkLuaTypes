@@ -1,7 +1,7 @@
 Wireshark Lua Types (Int64/UInt64/Struct) for LuaJIT
 ====================================================
 
-Standalone Lua dll that implements [Int64/UInt64](https://www.wireshark.org/docs/wsdg_html_chunked/lua_module_Int64.html)
+Standalone native library that implements [Int64/UInt64](https://www.wireshark.org/docs/wsdg_html_chunked/lua_module_Int64.html)
 and [Struct](https://www.wireshark.org/docs/wsdg_html_chunked/lua_module_Struct.html)
 
 Source from <https://github.com/wireshark/wireshark>
@@ -10,7 +10,7 @@ Source from <https://github.com/wireshark/wireshark>
 Build
 -----
 
-+ VS2019: use the vcxproj file and set AdditionalIncludeDirectories and AdditionalLibraryDirectories
++ VS2019: use the vcxproj file and set AdditionalIncludeDirectories & AdditionalLibraryDirectories
 + Linux: use makefile
 
 ```shell-script

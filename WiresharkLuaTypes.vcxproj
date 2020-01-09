@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\dllmain.c" />
+    <ClCompile Include="src\main.c" />
     <ClCompile Include="src\wslua_int64.c" />
     <ClCompile Include="src\wslua_internals.c" />
     <ClCompile Include="src\wslua_struct.c" />
