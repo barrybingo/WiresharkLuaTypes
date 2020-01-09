@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\dllmain.c" />
+    <ClCompile Include="src\wslua_int64.c" />
+    <ClCompile Include="src\wslua_internals.c" />
+    <ClCompile Include="src\wslua_struct.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\glibtypes.h" />
+    <ClInclude Include="src\wslua.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+  </ItemGroup>
+</Project>
